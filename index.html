@@ -1,0 +1,253 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+        <style>
+            .centered-text {
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+           
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: black;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            .content {
+                flex: 1;
+            }
+
+            .footer {
+                text-align: center;
+                padding: 10px;
+                background-color: #333;
+                color: #f1f1f1;
+                font-size: 14px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+     
+               
+              
+
+        </style>
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+          
+                margin: 0;
+                height: 100vh;
+                background: #000;
+                overflow: hidden;
+                position: relative;
+            }
+            
+  
+           
+            .centered-text{
+                font-family: 'Roboto', sans-serif;  
+            }
+
+            #canvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0; /* Make sure the canvas is above other elements */
+            }
+            
+            #box {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 50px;
+                height: 2px;
+               
+               
+                box-shadow: 0 0 5px rgba(255,255,255,0.5);
+                transform-origin: center;
+                z-index: 1; /* Make sure the box is above the canvas */
+            }
+
+            #box2 {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 50px;
+                height: 2px;
+                box-shadow: 0 0 5px rgba(255,255,255,0.5);
+                transform-origin: center;
+                z-index: 1; /* Make sure the box is above the canvas */
+            }
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            
+            .fade-in {
+                animation: fadeIn 2s ease-in;
+      
+                font-size: 48px; /* Increase the size */
+                color: white; /* Change the color */
+                font-family: 'Arial', sans-serif; /* Change the font */
+ /* Make the text bold */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow to the text */
+               
+               
+               
+            }
+            
+
+            .text-background {
+                background-color: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+
+            </style>
+            
+            
+          
+   
+        
+    </head>
+    <body>
+     <div id="box" ></div>
+     <div id="box2" ></div> 
+     <canvas id="canvas"></canvas>
+    <nav>
+        <!-- Add your navbar links here -->
+        <ul class="flex justify-center">
+            >
+            <li><a href="#"><img src="https://pngimg.com/d/github_PNG32.png" alt="GitHub" width="32" height="38" style="margin-right: 10px;"></a></li>
+            <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png" alt="LinkedIn" width="32" height="32" style="margin-right: 10px;"></a></li>
+
+            <li><a href="#"><img src="https://seeklogo.com/images/I/instagram-logo-1494D6FE63-seeklogo.com.png" alt="Instagram" width="32" height="32" style="margin-right: 10px;"></a></li>
+            <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="Twitter" width="32" height="32" style="margin-right: 10px;"></a></li>
+            <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="Facebook" width="32" height="32" style="margin-right: 10px;"></a></li>
+        </ul>
+    </nav>
+
+    <div class="centered-text text-background">
+        <h1 class="fade-in" style="font-size: 48px; color: white; font-weight: bold; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">DefinitelyNotAnAssassin</h1>
+        <p class="fade-in" style="font-size: 15px; color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); text-align: justify;">
+            Welcome to my portfolio. I am a professional web developer with a strong focus on Python and Django. My experience spans across designing, developing, and deploying high-quality web applications. I am proficient in creating responsive and interactive user interfaces using modern front-end technologies. I am committed to writing clean and efficient code, and I am always ready to adapt to new technologies to deliver cutting-edge solutions. Explore my work to see how I can bring your projects to life.
+        </p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 DefinitelyNotAnAssassin</p>
+    </footer>
+
+
+    <script>
+        let box = document.getElementById('box');
+        let box2 = document.getElementById('box2');
+        let footer = document.querySelector('.footer');
+        let xSpeed = 2;
+        let ySpeed = 3;
+        let xSpeed2 = -2; // Speed for the second box
+        let ySpeed2 = -3; // Speed for the second box
+        
+        // Get the canvas and its context
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        
+        // Set the size of the canvas to fill the window
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        // Initialize the previous position of the box
+        let prevX = box.offsetLeft + box.offsetWidth / 2; // Adjust to the center of the box
+        let prevY = box.offsetTop + box.offsetHeight / 2; // Adjust to the center of the box
+        
+        // Initialize the previous position of box2
+        let prevX2 = box2.offsetLeft + box2.offsetWidth / 2; // Adjust to the center of box2
+        let prevY2 = box2.offsetTop + box2.offsetHeight / 2; // Adjust to the center of box2
+        
+        // Design the line
+        ctx.lineWidth = 2; // Change this to adjust the thickness of the line
+        ctx.lineCap = 'round'; // This makes the ends of the line rounded
+        
+        function animate() {
+            let x = box.offsetLeft + box.offsetWidth / 2; // Adjust to the center of the box
+            let y = box.offsetTop + box.offsetHeight / 2; // Adjust to the center of the box
+        
+            let x2 = box2.offsetLeft + box2.offsetWidth / 2; // Adjust to the center of box2
+            let y2 = box2.offsetTop + box2.offsetHeight / 2; // Adjust to the center of box2
+        
+            if (x + box.offsetWidth / 2 > window.innerWidth || x - box.offsetWidth / 2 < 0) {
+                xSpeed = -xSpeed;
+            }
+        
+            if (y + box.offsetHeight / 2 > window.innerHeight - footer.offsetHeight || y - box.offsetHeight / 2 < 0) {
+                ySpeed = -ySpeed;
+            }
+        
+            if (x2 + box2.offsetWidth / 2 > window.innerWidth || x2 - box2.offsetWidth / 2 < 0) {
+                xSpeed2 = -xSpeed2;
+            }
+        
+            if (y2 + box2.offsetHeight / 2 > window.innerHeight - footer.offsetHeight || y2 - box2.offsetHeight / 2 < 0) {
+                ySpeed2 = -ySpeed2;
+            }
+        
+            box.style.left = (x - box.offsetWidth / 2) + xSpeed + 'px'; // Adjust to the top left corner of the box
+            box.style.top = (y - box.offsetHeight / 2) + ySpeed + 'px'; // Adjust to the top left corner of the box
+        
+            box2.style.left = (x2 - box2.offsetWidth / 2) + xSpeed2 + 'px'; // Adjust to the top left corner of box2
+            box2.style.top = (y2 - box2.offsetHeight / 2) + ySpeed2 + 'px'; // Adjust to the top left corner of box2
+        
+            // Draw a line on the canvas from the previous position of the box to the current position
+            ctx.beginPath();
+            ctx.moveTo(prevX, prevY);
+            ctx.lineTo(x, y);
+            ctx.strokeStyle = 'white'; // Change this to the color you want for the trail
+            ctx.stroke();
+        
+            // Draw a line on the canvas from the previous position of box2 to the current position
+            ctx.beginPath();
+            ctx.moveTo(prevX2, prevY2);
+            ctx.lineTo(x2, y2);
+            ctx.strokeStyle = 'white'; // Change this to the color you want for the trail
+            ctx.stroke();
+        
+            // Update the previous position of the box
+            prevX = x;
+            prevY = y;
+        
+            // Update the previous position of box2
+            prevX2 = x2;
+            prevY2 = y2;
+        
+            requestAnimationFrame(animate);
+        }
+        
+        animate();
+    </script>
+</body>
+</html>
+
