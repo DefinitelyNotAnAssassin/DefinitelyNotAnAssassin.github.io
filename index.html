@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta property="og:title" content="OSSPH Freefolio - Simple Template"/>
+    <meta property="og:description" content="100% FREE Professional Portfolio Templates - Simple Template"/>
+    <meta property="og:type" content="website" />
+    <meta
+        property="og:image"
+        content="https://freefolio.web.app/images/simple.PNG"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:alt" content="OSSPH Freefolio">
+    <meta name="twitter:title" content="OSSPH Freefolio - Simple Template" />
+    <meta name="twitter:description" content="100% FREE Professional Portfolio Templates - Simple Template" />
+    <link rel="shortcut icon" type="image/svg" href="./pictures/programmer.svg">
+    <title>Simple a Freefolio template by OSSPH</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+
+    <script type="module">
+      import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+    
+      const keenSlider = new KeenSlider(
+        '#keen-slider',
+        {
+          loop: true,
+          slides: {
+            origin: 'center',
+            perView: 1.25,
+            spacing: 16,
+          },
+          breakpoints: {
+            '(min-width: 1024px)': {
+              slides: {
+                origin: 'auto',
+                perView: 1.5,
+                spacing: 32,
+              },
+            },
+          },
+        },
+        []
+      )
+    
+      const keenSliderPrevious = document.getElementById('keen-slider-previous')
+      const keenSliderNext = document.getElementById('keen-slider-next')
+    
+      const keenSliderPreviousDesktop = document.getElementById('keen-slider-previous-desktop')
+      const keenSliderNextDesktop = document.getElementById('keen-slider-next-desktop')
+    
+      keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+      keenSliderNext.addEventListener('click', () => keenSlider.next())
+    
+      keenSliderPreviousDesktop.addEventListener('click', () => keenSlider.prev())
+      keenSliderNextDesktop.addEventListener('click', () => keenSlider.next())
+    </script>
+    
+</head>
+
+<body>
+
+    <main>
+        <!--Content-->
+
+        <!--Hero Section-->
+        <section class="Hero" data-aos="fade-up">
+            <h1>I am a Full Stack <span>Web Application</span> Developer</h1>
+            <p>
+                Transform your vision into reality. I design and build stunning web experiences with over 3 years of full-stack expertise.
+            </p>
+
+            <!--call to action-->
+            <button class="cta">
+                Contact Me
+            </button>
+        </section>
+
+
+        <!--Illustration-->
+        <section class="illustration" data-aos="fade-up">
+            <img src="./pictures/bendy-man-developer-writing-programming-code.gif" alt="">
+        </section>
+
+
+        <!---->
+    </main>
+    <section class="bg-gray-50">
+        <div class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
+            <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+              <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Don't just take our word for it...
+              </h2>
+      
+              <p class="mt-4 text-gray-700">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat
+                harum porro optio fugit a culpa sunt id!
+              </p>  
+      
+             
+              <div class="hidden lg:mt-8 lg:flex lg:justify-center lg:gap-4">
+      
+                  <a href="#" title="" class="mb-5  items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-secondary font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
+                      Write a Testimonial
+                  </a>
+
+              </div>
+            </div>
+      
+            <div class="-mx-6 lg:col-span-2 lg:mx-0">
+              <div id="keen-slider" class="keen-slider">
+                <div class="keen-slider__slide">
+                  <blockquote
+                    class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+                  >
+                    <div>
+                      <div class="flex gap-0.5 text-green-500">
+                    
+                      </div>
+      
+                      <div class="mt-4">
+                        <p class="text-xl font-bold text-gray-600 sm:text-2xl">Domini Xode Website</p>
+      
+                        <img src="domini_xode_landing_page.PNG" alt="" srcset="">
+                      </div>
+                    </div>
+      
+                    <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                      &mdash; Michael Fox
+                    </footer>
+                  </blockquote>
+                </div>
+      
+                <div class="keen-slider__slide">
+                  <blockquote
+                    class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+                  >
+                    <div>
+                      <div class="flex gap-0.5 text-green-500">
+                     
+                      </div>
+      
+                      <div class="mt-4">
+                        <p class="text-2xl font-bold text-gray-600 sm:text-3xl">SarcasticBot</p>
+      
+                        <img src="sarcastical_landing_page.PNG" alt="" srcset="">
+                      </div>
+                    </div>
+      
+                    <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                      &mdash; Michael Scott
+                    </footer>
+                  </blockquote>
+                </div>
+
+                <div class="keen-slider__slide">
+                    <blockquote
+                      class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+                    >
+                      <div>
+                        <div class="flex gap-0.5 text-green-500">
+                       
+                        </div>
+        
+                        <div class="mt-4">
+                          <p class="text-2xl font-bold text-gray-600 sm:text-3xl">Bacoor Exploration Map</p>
+        
+                          <img src="bacoor_exploration_map_landing_page.PNG" alt="" srcset="">
+                        </div>
+                      </div>
+        
+                      <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                        &mdash; Michael Scott
+                      </footer>
+                    </blockquote>
+                  </div>
+      
+                <div class="keen-slider__slide">
+                  <blockquote
+                    class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+                  >
+                    <div>
+                      <div class="flex gap-0.5 text-green-500">
+                     
+                      </div>
+      
+                      <div class="mt-4">
+                        <p class="text-2xl font-bold text-gray-600 sm:text-3xl">My Schema Flow</p>
+      
+                        <img src="my_schema_flow.PNG" alt="" srcset="">
+                      </div>
+                    </div>
+      
+                    <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                      &mdash; Michael Jordan
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="mt-8 flex justify-center gap-4 ">
+            <button
+              aria-label="Previous slide"
+              id="keen-slider-previous"
+              class="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+            >
+              <svg
+                class="size-5 -rotate-180 transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              </svg>
+            </button>
+      
+            <button
+              aria-label="Next slide"
+              id="keen-slider-next"
+              class="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+            >
+              <svg
+                class="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              </svg>
+            </button>
+      
+       
+          </div>
+      
+          <div class="lg:hidden flex items-center w-full justify-center mt-8">
+              <a href="#" title="" class="mb-5 items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-secondary font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
+                  Write a Testimonial
+              </a>
+          </div>
+      
+        </div>
+      </section>
+      
+
+      <section class="py-12 bg-gray-50 sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="text-center">
+                
+                <p class="mt-4 text-base leading-7 text-gray-600 sm:mt-8 font-pj">Lorem ipsum dolor sit amet, consectetur adipis elit</p>
+            </div>
+    
+            <div class="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24">
+                <div class="md:p-8 lg:p-14 card">
+             
+                    <span class="flex">
+                        <svg class="mx-auto" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                            <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"></path><path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"></path>
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                            <path fill="#ffd600" d="M6,42V6h36v36H6z"></path><path fill="#000001" d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z"></path>
+                        </svg>
+                    </span>
+                 
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">HTML, CSS, JavaScript</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj">Skilled in crafting user-friendly interfaces with HTML, bringing them to life with CSS, and adding interactivity with JavaScript. Passionate about building clean, responsive, and performant web experiences.</p>
+                </div>
+                
+                <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 card">
+                    <svg class="mx-auto" width="50" height="42" viewBox="0 0 42 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        
+                            <path fill="#004d40" fill-rule="evenodd" d="M8,16v12.646C6.655,28.9,5.949,29,4.878,29 C1.67,28.997,0,27.565,0,24.816c0-2.649,1.771-4.368,4.516-4.368c0.426,0,0.75,0.033,1.143,0.134V16H8z M5.659,22.672 c-0.308-0.1-0.561-0.134-0.886-0.134c-1.328,0-2.096,0.809-2.096,2.228c0,1.381,0.734,2.143,2.079,2.143 c0.291,0,0.527-0.016,0.903-0.067V22.672L5.659,22.672z" clip-rule="evenodd"></path><path fill="#004d40" fill-rule="evenodd" d="M12,20.046v6.618c0,2.076-0.155,3.224-0.612,4.084 c-0.426,0.827-0.987,1.349-2.146,1.925l-2.437-1.149c1.159-0.539,1.721-1.015,2.079-1.742c0.375-0.743,0.494-1.754,0.494-4.017 v-5.721H12z" clip-rule="evenodd"></path><rect width="2.623" height="2.713" x="9.377" y="16" fill="#004d40" fill-rule="evenodd" clip-rule="evenodd"></rect><path fill="#004d40" fill-rule="evenodd" d="M13.734,20.876c1.136-0.552,2.223-0.795,3.408-0.795 c1.321,0,2.189,0.363,2.573,1.073C19.93,21.551,20,22.068,20,23.175v5.407c-1.152,0.171-2.606,0.294-3.673,0.294 c-2.156,0-3.123-0.778-3.123-2.505c0-1.868,1.285-2.731,4.441-3.006V22.78c0-0.483-0.235-0.658-0.884-0.658 c-0.95,0-2.02,0.278-3.024,0.812L13.734,20.876z M17.761,25.107c-1.702,0.171-2.255,0.449-2.255,1.141 c0,0.518,0.318,0.761,1.02,0.761c0.384,0,0.735-0.034,1.235-0.12L17.761,25.107L17.761,25.107z" clip-rule="evenodd"></path><path fill="#004d40" fill-rule="evenodd" d="M21.418,20.693c1.52-0.421,2.772-0.613,4.041-0.613 c1.318,0,2.273,0.317,2.839,0.93C28.83,21.588,29,22.222,29,23.573v5.303h-2.574v-5.195c0-1.038-0.335-1.424-1.252-1.424 c-0.351,0-0.669,0.035-1.186,0.195v6.425h-2.57V20.693z" clip-rule="evenodd"></path><path fill="#004d40" fill-rule="evenodd" d="M30.177,30.006c0.919,0.486,1.839,0.71,2.812,0.71 c1.721,0,2.454-0.473,2.454-2.176v-0.052c-0.51,0.258-1.025,0.366-1.704,0.366c-2.302,0-3.739-1.547-3.739-3.997 c0-3.043,2.141-4.762,5.974-4.762c1.126,0,2.167,0.121,3.427,0.383l-0.899,1.93c-0.699-0.138-0.057-0.021-0.584-0.072v0.279 l0.034,1.13l0.017,1.461c0.017,0.366,0.017,0.73,0.034,1.096v0.73c0,2.295-0.19,3.131-0.751,4.02 c-0.818,1.302-2.234,1.947-4.246,1.947c-1.024,0-1.91-0.155-2.829-0.521V30.006L30.177,30.006z M35.392,22.251h-0.085h-0.19 c-0.51-0.017-1.108,0.121-1.518,0.383c-0.628,0.365-0.953,1.027-0.953,1.964c0,1.337,0.649,2.102,1.808,2.102 c0.358,0,0.649-0.069,0.987-0.172v-0.193v-0.73c0-0.314-0.017-0.662-0.017-1.027l-0.017-1.234l-0.017-0.886V22.251z" clip-rule="evenodd"></path><path fill="#004d40" fill-rule="evenodd" d="M43.566,20.046c2.753,0,4.434,1.66,4.434,4.348 c0,2.756-1.752,4.483-4.544,4.483c-2.756,0-4.456-1.659-4.456-4.33C39.005,21.774,40.757,20.046,43.566,20.046z M43.509,26.752 c1.057,0,1.681-0.838,1.681-2.294c0-1.439-0.607-2.294-1.663-2.294c-1.093,0-1.718,0.838-1.718,2.294 C41.81,25.914,42.438,26.752,43.509,26.752L43.509,26.752z" clip-rule="evenodd"></path>
+                        
+                    </svg>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Django</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj">Proficient in Django, a high-level Python framework for building scalable and secure web applications. Experience in creating models, views, templates, and deploying projects to production environments.</p>
+                </div>
+                
+                <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 card">
+                    <img class="mx-auto" width="42" height="50" src="https://icons.iconarchive.com/icons/arturo-wibawa/akar/256/php-icon.png" alt="" srcset="">
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Sales</h3>
+                   
+                    <p class="mt-5 text-base text-gray-600 font-pj">Full-stack PHP developer: proficient in creating MVC-based applications, handling user authentication, implementing security best practices, and building RESTful APIs. Comfortable with various databases (mention specific ones) and optimization techniques for performance.</p>
+                </div>
+    
+              
+    
+                <div class="md:p-8 lg:p-14 md:border-t md:border-gray-200 card">
+                    <img class="mx-auto" width="42" height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/640px-Vue.js_Logo_2.svg.png" alt="" srcset="">
+                 
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Vue.js</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj">Experienced in utilizing Vue 3 features like Composition API and Teleport, leveraging powerful libraries like Vuetify and Nuxt.js for advanced UI components and efficient routing. Adept at testing and deploying Vue applications.</p>
+                </div>
+    
+                <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" height = "50" class="mx-auto" id="angularjs"><path fill="#C4473A" d="M52.864 64h23.28l-12.375-25.877zM63.81 1.026l-59.257 20.854 9.363 77.637 49.957 27.457 50.214-27.828 9.36-77.635-59.637-20.485zm-15.766 73.974l-7.265 18.176-13.581.056 36.608-81.079-.07-.153h-.064l.001-.133.063.133h.14100000000000001l.123-.274v.274h-.124l-.069.153 38.189 81.417-13.074-.287-8.042-18.58-17.173.082"></path></svg>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">AngularJS</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj">Skilled in utilizing AngularJS features like directives, filters, services, and controllers. Experience with building custom directives, using RESTful APIs, and implementing best practices for testing and performance optimization.</p>
+                </div>
+    
+                <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t card">
+                    <img  class="mx-auto" width="60" height="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="" srcset="">
+
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">React</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj"> Proficient in creating single-page applications and interactive components using React, ensuring smooth user experiences and clean code structure. Adept at working with state management solutions like Redux or Context API.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+      
+    <script>
+       
+        const menuIcon = document.querySelector('#menuIcon');
+        const menu = document.querySelector("#menu");
+
+        const closeIcon= document.querySelector('#closeIcon');
+
+
+        //on the call on an event, like a click do somthing
+        //needs the event, ten the function
+        menuIcon.addEventListener('click', () => {
+            //alert('click')
+
+            menu.classList.replace('hidden','visible')
+        })
+
+
+        closeIcon.addEventListener('click', () => {
+            //alert('click')
+
+            menu.classList.replace('visible','hidden')
+        })
+
+    </script>
+
+    <footer>
+
+    </footer>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>       
+        AOS.init({
+            once: true,
+            delay: 0
+        });
+    </script>
+</body>
+
+</html>
