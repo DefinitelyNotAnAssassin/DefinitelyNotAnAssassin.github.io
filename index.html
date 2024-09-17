@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script>
-window.onload = function() {
-  var context = new AudioContext();
-}
-</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 100px;
+        border-radius: 10px;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <div class="h-screen w-full flex flex-col items-center justify-center ">
+    <div class="h-screen w-full flex flex-col items-center justify-center">
       <h1 class="3xl font-mono" id="title"></h1>
       <h1 class="text-5xl font-mono" id="time"></h1>
     </div>
@@ -25,29 +47,31 @@ window.onload = function() {
         alt=""
       />
 
-      <pre class="text-lg font-sans text-center w-[90%] md:w-1/2 whitespace-pre-line"  >
+      <pre
+        class="text-lg font-sans text-center w-[90%] md:w-1/2 whitespace-pre-line"
+      >
         Winmari is not just an aspiring web developer with a knack for creating awesome applications, but also a dedicated student leader who always puts his peers first. Whether he’s organizing events, leading study groups, or volunteering in outreach programs, Winmari’s passion for helping others shines through in everything he does. 
 
         His leadership and commitment have made a huge impact on our community, and now it’s time to celebrate him! Let’s come together to honor Winmari’s achievements, share some laughs, and make unforgettable memories.
+      </pre>
+    </div>
+
+    <div class="h-screen w-full flex flex-col items-center justify-center">
+      <h1 class="text-3xl font-mono">About the Party!</h1>
+      <p
+        class="text-lg font-sans text-center w-[90%] md:w-1/2 whitespace-pre-line"
+      >
+        Theme: Cocomelon Date: September 23, 2024 Time: 4:00 PM Venue: 2nd
+        Floor, New Molino McDonalds, Bacoor, Cavite
       </p>
     </div>
 
-
-
-    <div class="h-screen w-full flex flex-col items-center justify-center">
-        <h1 class="text-3xl font-mono">About the Party!</h1>
-        <p class="text-lg font-sans text-center w-[90%] md:w-1/2 whitespace-pre-line">
-            Theme: Cocomelon  
-            Date: September 23, 2024 
-            Time: 4:00 PM
-            Venue: 2nd Floor, New Molino McDonalds, Bacoor, Cavite
-         
-        </p>
-    </div>
-
-    <audio autoplay class="hidden">
+    <audio class="hidden" id="audio">
       <source src="wheels_on_the_bus.mp3" type="audio/mpeg" />
     </audio>
+
+    <div class="popup" id="popup">Click anywhere for a surprise!</div>
+
     <script>
       const time = document.getElementById("time")
       const date = new Date()
@@ -77,6 +101,14 @@ window.onload = function() {
 
       const title = document.getElementById("title")
       title.innerHTML = "Time left for the party:"
+
+      const audio = document.getElementById("audio")
+      const popup = document.getElementById("popup")
+
+      document.addEventListener("click", () => {
+        audio.play()
+        popup.classList.add("hidden")
+      })
     </script>
   </body>
 </html>
